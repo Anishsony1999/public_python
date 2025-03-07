@@ -75,5 +75,9 @@ for i in range(0,len(names)): # i = 0
     for j in range(0,len(skils)): # j = 0
         print(names[j] +" "+ skils[i])
 
+num = 5
 
-
+for i in range(num) :
+    print(i)
+else :
+    print("This loop will be end")
