@@ -74,8 +74,20 @@ class Bank:
     def get_balace(self):
         print(f"Your Balance is : {self.__balance}")
 
+    def __adding():
+        print("Adding Function")
+    
+    __adding() # private function will use in side the class only
+
 gopika = Bank()
 gopika.set_balace(300)
 # gopika.__balance = 300
 # print(gopika.balance)
 gopika.get_balace()
+
+
+# id and pass , user details kanikanum
+# creadit 
+# deapit
+
+
