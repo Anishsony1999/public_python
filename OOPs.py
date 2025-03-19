@@ -79,15 +79,30 @@ class Bank:
     
     __adding() # private function will use in side the class only
 
-gopika = Bank()
+gopika = Bank() # name , pass , balance
+anish = Bank()
+anu = Bank()
+
+# console input , name ,pass , find  by name and pass -> welcom anish 
+# 1, ceadit 
+# 2, debit 
+
 gopika.set_balace(300)
 # gopika.__balance = 300
 # print(gopika.balance)
 gopika.get_balace()
 
 
-# id and pass , user details kanikanum
-# creadit 
-# deapit
+from abc import ABC, abstractclassmethod
+class Animal(ABC): # Abstract Base Class
+
+    @abstractclassmethod 
+    def make_sound(self):
+        pass
+
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Whow whow")
 
 
