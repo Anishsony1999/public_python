@@ -46,11 +46,30 @@ with open('output.csv','w',newline='') as csvf :
     writer = csv.writer(csvf)
     writer.writerow(['Name','Age','City'])
     writer.writerow(['Alice',25,'New York'])
+    writer.writerow(['Anish',24,'Ind'])
 
-import os
+# csv to dict
 
-if os.path.exists("output.csv") :
-    print("File is avialble")
-else:
-    print("File nnot fount")
-    
+with open('output.csv',mode='r') as file :
+
+    csv_reader = csv.DictReader(file)
+
+    for row in csv_reader :
+        print(row)
+
+# dict to csv
+
+fieldname = ['Name' , 'Age' , 'City']
+
+data = [
+    {'Name' : 'Anish','Age':24 , 'City':'IND'},
+    {'Name' : 'Anusha','Age':24 , 'City':'USA'},
+    {'Name' : 'ABI','Age':24 , 'City':'UK'}
+]
+
+with open('output2.csv',mode='w',newline='') as file :
+
+    csv_writer = csv.DictWriter(file,fieldname,)
+    csv_writer.writeheader()
+    csv_writer.writerows(data)
+
